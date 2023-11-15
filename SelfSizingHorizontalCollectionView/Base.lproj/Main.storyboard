@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SelfSizingHorizontalCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lnu-cj-HV8" customClass="SelfSizingHorizontalCollectionView" customModule="SelfSizingHorizontalCollectionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IIB-bf-VCD"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PNq-oD-UXG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRf-4S-JNc">
+                                <rect key="frame" x="135" y="107" width="123" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Set One Item"/>
+                                <connections>
+                                    <action selector="setOneItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5e5-a5-9fS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2x-CS-2Wp">
+                                <rect key="frame" x="116" y="150" width="161" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Set Multiple Items"/>
+                                <connections>
+                                    <action selector="setMultipleItems:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDy-4s-ONn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lnu-cj-HV8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KUu-95-9aN"/>
+                            <constraint firstItem="lRf-4S-JNc" firstAttribute="centerX" secondItem="lnu-cj-HV8" secondAttribute="centerX" id="TCd-9U-kX8"/>
+                            <constraint firstItem="E2x-CS-2Wp" firstAttribute="top" secondItem="lRf-4S-JNc" secondAttribute="bottom" constant="8" symbolic="YES" id="c6Y-1r-ojP"/>
+                            <constraint firstItem="E2x-CS-2Wp" firstAttribute="centerX" secondItem="lRf-4S-JNc" secondAttribute="centerX" id="sDd-xY-vHj"/>
+                            <constraint firstItem="lnu-cj-HV8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tFW-Bm-wCR"/>
+                            <constraint firstItem="lnu-cj-HV8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xm4-QF-whz"/>
+                            <constraint firstItem="lRf-4S-JNc" firstAttribute="top" secondItem="lnu-cj-HV8" secondAttribute="bottom" constant="8" symbolic="YES" id="zh3-dJ-yRi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="lnu-cj-HV8" id="eCW-Sz-2Ff"/>
+                        <outlet property="collectionViewHeightConstraint" destination="IIB-bf-VCD" id="xTA-Ts-sh9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38.931297709923662" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
