@@ -1,0 +1,2 @@
+# SelfSizingHorizontalCollectionView
+Self-sizing Horizontal UICollectionView
