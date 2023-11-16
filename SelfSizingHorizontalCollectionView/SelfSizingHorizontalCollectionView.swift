@@ -9,8 +9,6 @@ import UIKit
 
 class SelfSizingHorizontalCollectionView: UICollectionView {
     
-    private var didLayoutSubviews: Bool = false
-    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         let horizontalLayout = UICollectionViewFlowLayout()
         horizontalLayout.scrollDirection = .horizontal

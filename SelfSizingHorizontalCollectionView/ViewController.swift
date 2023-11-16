@@ -26,10 +26,6 @@ class ViewController: UIViewController {
         
         collectionView.dataSource = self
         
-        let horizontalCollectionViewFlowLayout = UICollectionViewFlowLayout()
-        horizontalCollectionViewFlowLayout.scrollDirection = .horizontal
-        collectionView.collectionViewLayout = horizontalCollectionViewFlowLayout // Set Horizontal UICollectionViewFlowLayout
-        
         let cellIdentifier = String(describing: CollectionViewCell.self)
         let nib = UINib(nibName: cellIdentifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: cellIdentifier)
